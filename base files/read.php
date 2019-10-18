@@ -38,10 +38,8 @@ if ($users->num_rows > 0) {
 			<td class="text-center"> 
 
 			<!-- update area -->
-			<form method="post"  action ="update.php"  id="edit<?php echo $user['id']?>"   style="display:none; " >
+			<form method="get"  action ="update.php"  id="edit<?php echo $user['id']?>"   style="display:none; " >
 			<input value="<?php echo $user['id']?>" name = 'uid' />
-			<input value="<?php echo $user['firstname']?>" name = 'firstname' />
-			<input value="<?php echo $user['lastname']?>" name = 'lastname' />
 
 			</form>
 
