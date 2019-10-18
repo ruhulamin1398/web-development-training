@@ -37,16 +37,16 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="create.php">Create</a>
+                <a class="nav-link" href="about.php">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="update.php">update</a>
+                <a class="nav-link" href="update.php">Provost</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Photo Galary</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#">Application Form</a>
             </li>
 
 
