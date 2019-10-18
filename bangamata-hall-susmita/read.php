@@ -22,6 +22,11 @@ $users= $db->query($sql);
 			<th scope="col">Id</th>
 			<th scope="col">First</th>
 			<th scope="col">Last</th>
+			<th scope="col"> Reg_No </th>
+			<th scope="col">Hometown</th>
+			<th scope="col">Department</th>
+			<th scope="col"> Phone_no</th>
+
 			<th scope="col" class="text-center">Action</th>
 		</tr>
 	</thead>
@@ -32,9 +37,15 @@ if ($users->num_rows > 0) {
 	while($user = $users->fetch_assoc()) {
 	?>
 		<tr>
-			<th scope="row"><?php echo $user['id']?> </th>
-			<td><?php echo $user['firstname']?> </td>
-			<td> <?php echo $user['lastname']?></td>
+			<th scope="row"><?php echo $user['Id']?> </th>
+			<td><?php echo $user['Firstname']?> </td>
+			<td> <?php echo $user['Lastname']?></td>
+			<td> <?php echo $user['Reg_No']?></td>
+			<td> <?php echo $user['Hometown']?></td>
+			<td> <?php echo $user['Department']?></td>
+			<td> <?php echo $user['Phone_no']?></td>
+
+
 			<td class="text-center"> 
 
 			<!-- update area -->
