@@ -40,10 +40,10 @@ if ($users->num_rows > 0) {
 			<th scope="row"><?php echo $user['Id']?> </th>
 			<td><?php echo $user['Firstname']?> </td>
 			<td> <?php echo $user['Lastname']?></td>
-			<td> <?php echo $user[' Reg_No ']?></td>
-			<td> <?php echo $user[' Hometown ']?></td>
-			<td> <?php echo $user[' Department ']?></td>
-			<td> <?php echo $user[' Phone_no ']?></td>
+			<td> <?php echo $user['Reg_No']?></td>
+			<td> <?php echo $user['Hometown']?></td>
+			<td> <?php echo $user['Department']?></td>
+			<td> <?php echo $user['Phone_no']?></td>
 
 
 			<td class="text-center"> 
