@@ -1,4 +1,12 @@
-<!doctype html>
+<?php 
+
+
+$sql = "SELECT * FROM users";
+$users= $db->query($sql);
+
+?>
+
+
 
 <div class="container">
 	<!-- @if (session('successMsg'))
@@ -7,6 +15,98 @@
 		<strong>Well done!</strong> {{ session('successMsg') }}
 	</div>
 	@endif -->
+
+<table class="table table-striped table-hover table-bordered ">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">First</th>
+			<th scope="col">Last</th>
+			<th scope="col" class="text-center">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+	
+if ($users->num_rows > 0) {
+	while($user = $users->fetch_assoc()) {
+	?>
+		<tr>
+			<th scope="row"><?php echo $user['id']?> </th>
+			<td><?php echo $user['firstname']?> </td>
+			<td> <?php echo $user['lastname']?></td>
+			<td class="text-center"> 
+
+			<!-- update area -->
+			<form method="post"  action ="update.php"  id="edit<?php echo $user['id']?>"   style="display:none; " >
+			<input value="<?php echo $user['id']?>" name = 'uid' />
+			<input value="<?php echo $user['firstname']?>" name = 'firstname' />
+			<input value="<?php echo $user['lastname']?>" name = 'lastname' />
+
+			</form>
+
+
+
+
+			<button   onclick="
+				document.getElementById('edit<?php echo $user['id']?>').submit();
+				
+				
+	
+
+			" class="btn btn-success btn-sm btn-raised" >
+				<i class="fas fa-edit" aria-hidden="true">
+				
+				</i>
+			</button>
+
+
+
+<!-- Delete Area -->
+
+
+
+			<form method="POST"  action ="delete.php"  id="delete-form<?php echo $user['id']?>"   style="display:none; " >
+			<input value="<?php echo $user['id']?>" name = 'uid' />
+
+			</form>
+
+			<button   onclick="if(confirm('are you sure to delete  <?php echo $user['firstname']?> ?')){
+				document.getElementById('delete-form<?php echo $user['id']?>').submit();
+				
+				
+			}
+			else{
+				event.preventDefault();
+
+			}
+
+			" class="btn btn-danger btn-sm btn-raised" >
+				<i class="fa fa-trash" aria-hidden="true">
+				
+				</i>
+			</button>
+		</td>
+	</tr>
+		<?php }} ?>
+
+</tbody>
+</table>
+
+</div>
+
+
+<!--
+
+ <!doctype html>
+
+<div class="container">
+	 @if (session('successMsg'))
+	<div class="alert alert-dismissible alert-success">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<strong>Well done!</strong> {{ session('successMsg') }}
+	</div>
+	@endif 
 
 <table class="table table-striped table-hover table-bordered ">
 	<thead>
@@ -53,7 +153,9 @@
 	@endforeach
 </tbody>
 </table>
-<!-- {{$students->links()}} -->
+{{$students->links()}} 
 
 </div>
 @endsection
+
+-->
