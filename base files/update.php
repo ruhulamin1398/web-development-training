@@ -20,11 +20,11 @@ if( isset($_POST['submit'])){
     $lastname= test_input ( $_POST['lastname'] );
     $uid= test_input ( $_POST['uid'] );
   
-
+    echo $firstname."--".$lastname;
     $sql= "UPDATE USERS SET firstname='$firstname', lastname='$lastname'  WHERE id=$uid";
 
     if($db->query($sql)== TRUE)
-    echo "Data update Successfully";
+    echo "Data Added Successfully";
     else 
     echo "Fail to inser data !! Try again";
 
@@ -45,9 +45,6 @@ $uid= $_GET['uid'];
   $firstname=$user['firstname'];
   $lastname= $user['lastname'];
 ?>
-
-
-
 
 
 <!-- Horizontal material form -->
@@ -100,10 +97,15 @@ $uid= $_GET['uid'];
 </form>
 
 
-<?php } else {
+<?php } 
 ?>
-
 <form action="" method="get">
+
+    Enter Id :<input type="number" name="uid" /><br>
+    <input type="submit" value="edit" name='update' />
+
+</form>
+
 <div class="form-row align-items-center">
     <!-- Grid column -->
     <div class="col-auto">
@@ -115,17 +117,9 @@ $uid= $_GET['uid'];
     </div>
     <!-- Grid column -->
     <div class="col-auto">
-      <input  type="submit" value="edit" name='update'>
+      <input  type="submit" value="edit" name='update'  class="btn btn-primary mb-0">
     </div>
 </div>
-
- 
-
-</form>
-
-
-
-<?php } ?>
 
 
 
