@@ -16,17 +16,31 @@ function test_input($data) {
 
 if( isset($_POST['submit'])){
 
-    $firstname= test_input( $_POST['firstname']);
-    $lastname= test_input ( $_POST['lastname'] );
+    $Firstname= test_input( $_POST['Firstname']);
+    $Lastname= test_input ( $_POST['Lastname'] );
+    $Reg_No= test_input( $_POST['Reg_No']);
+    $Hometown= test_input ( $_POST['Hometown'] );
+    $Department= test_input( $_POST['Department']);
+    $Phone_no= test_input ( $_POST['Phone_no'] );
+
+
     $uid= test_input ( $_POST['uid'] );
   
-    echo $firstname."--".$lastname;
-    $sql= "UPDATE USERS SET firstname='$firstname', lastname='$lastname'  WHERE id=$uid";
+    $sql= "UPDATE girls SET 
+    Firstname='$Firstname', 
+    Lastname='$Lastname', 
+    Reg_No='$Reg_No',
+    Hometown='$Hometown',
+    Department='$Department',
+    Phone_no='$Phone_no'
+    
+     WHERE Id=$uid";
+
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";
     else 
-    echo "Fail to inser data !! Try again";
+    echo "Fail to insert data !! Try again";
 
 }
 ?>
@@ -39,11 +53,15 @@ if( isset($_POST['submit'])){
 
 $uid= $_GET['uid'];
 
-  $sql = "SELECT * FROM users WHERE id=$uid";
-  $user= $db->query($sql)->fetch_assoc();
+  $sql = "SELECT * FROM girls WHERE Id=$uid";
+  $girls= $db->query($sql)->fetch_assoc();
 
-  $firstname=$user['firstname'];
-  $lastname= $user['lastname'];
+  $Firstname=$girls['Firstname'];
+  $Lastname= $girls['Lastname'];
+  $Reg_No=$girls['Reg_No'];
+  $Hometown= $girls['Hometown'];
+  $Department=$girls['Department'];
+  $Phone_no= $girls['Phone_no'];
 ?>
 
 
@@ -65,18 +83,47 @@ $uid= $_GET['uid'];
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="firstname" value="<?php    echo $firstname ?>" id="inputfirstname"
+                    <input type="text" name="Firstname" value="<?php    echo $Firstname ?>" id="inputFirstname"
                         class="form-control">
-                    <label for="inputfirstname">First Name</label>
+                    <label for="inputFirstname">First Name</label>
                 </div>
 
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="lastname" value="<?php    echo $lastname ?>" id="inputlastname"
+                    <input type="text" name="Lastname" value="<?php    echo $Lastname ?>" id="inputLastname"
                         class="form-control">
-                    <label for="inputlastname">Last Name</label>
+                    <label for="inputLastname">Last Name</label>
                 </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Reg_No" value="<?php    echo $Reg_No ?>" id="inputReg_No"
+                        class="form-control">
+                    <label for="inputReg_No">Reg No</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Hometown" value="<?php    echo $Hometown ?>" id="inputHometown"
+                        class="form-control">
+                    <label for="inputHometown">Hometown</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Department" value="<?php    echo $Department ?>" id="inputDepartment"
+                        class="form-control">
+                    <label for="inputDepartment">Department</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Phone_no" value="<?php    echo $Phone_no ?>" id="inputPhone_no"
+                        class="form-control">
+                    <label for="inputPhone_no">Phone No</label>
+                </div>
+
                 <!-- Material input -->
                 <div class="md-form">
 
@@ -99,29 +146,6 @@ $uid= $_GET['uid'];
 
 <?php } 
 ?>
-<form action="" method="get">
-
-    Enter Id :<input type="number" name="uid" /><br>
-    <input type="submit" value="edit" name='update' />
-
-</form>
-
-<div class="form-row align-items-center">
-    <!-- Grid column -->
-    <div class="col-auto">
-      <!-- Material input -->
-      <div class="md-form">
-        <input type="number"  name="id" class="form-control mb-2" id="inlineFormInputMD" placeholder="1">
-        <label class="sr-only" for="inlineFormInputMD">ID</label>
-      </div>
-    </div>
-    <!-- Grid column -->
-    <div class="col-auto">
-      <input  type="submit" value="edit" name='update'  class="btn btn-primary mb-0">
-    </div>
-</div>
-
-
 
 
 <?php  include('includes\footer.php')  ?>

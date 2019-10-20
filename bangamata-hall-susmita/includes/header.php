@@ -26,12 +26,6 @@ $br='<br>';
 
 
 
-    <style>
-        body {
-            
-
-        }
-    </style>
 
 
 
