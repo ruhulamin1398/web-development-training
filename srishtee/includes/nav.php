@@ -2,17 +2,6 @@
 
     Database Project Template
 </div>
-<!-- <div>
-    <ul>
-
-        <li> <a href="index.php"> home</a> </li>
-        <li> <a href="custom_query.php"> custom_query</a> </li>
-        <li> <a href="create.php"> create</a> </li>
-        <li> <a href="update.php"> update</a> </li>
-    </ul>
-</div>
- -->
-
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark special-color-dark">
 
@@ -34,22 +23,10 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Student_Profile.php">Student_Profile</a>
+                <a class="nav-link" href="course_info.php">Course_Info</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="update.php">update</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="custom_query.php">Custom Query</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="custom_query.php">Notice</a>
+                <a class="nav-link" href="student_profile.php">Student_Profile</a>
             </li>
 
 

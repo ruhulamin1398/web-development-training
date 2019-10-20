@@ -41,32 +41,32 @@ echo "<br>";
 # Seeding data
 
 
-$sql ="INSERT INTO students(firstname,lastname,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Ruhul','Amin','Haidar Ali','Neelufa Akter','habiganj', 01234567891);
+$sql ="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('Ruhul Amin','Haidar Ali','Neelufa Akter','habiganj', 01234567891);
 
 ";
 
-$sql .="INSERT INTO students(firstname,lastname,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor','nargis','MP','kusuma','habiganj', 01234567891);
-
-";
-
-
-
-$sql .="INSERT INTO students(firstname,lastname,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor','nargis','MP','kusuma','habiganj', 01234567891);
+$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
 
 ";
 
 
-$sql .="INSERT INTO students(firstname,lastname,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor','nargis','MP','kusuma','habiganj', 01234567891);
+
+$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
 
 ";
 
 
-$sql .="INSERT INTO students(firstname,lastname,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor','nargis','MP','kusuma','habiganj', 01234567891);
+$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
+
+";
+
+
+$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
 
 ";
 
