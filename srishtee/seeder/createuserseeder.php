@@ -42,31 +42,41 @@ echo "<br>";
 
 
 $sql ="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Ruhul Amin','Haidar Ali','Neelufa Akter','habiganj', 01234567891);
+VALUES('Ruhul Amin','Haidar Ali','Neelufa Akter','Habiganj', 01234567891);
 
 ";
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
+VALUES('Shoumik Roy','X','Y','Sylhet', 01234567891);
 
 ";
 
 
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
-
-";
-
-
-$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
+VALUES('Sita Rani Nath','X','Y','Sunamgonj', 01234567891);
 
 ";
 
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('gurnijor nargis','MP','kusuma','habiganj', 01234567891);
+VALUES('Sushmita Sarker','W','X','Sylhet', 01234567891);
+
+";
+
+
+$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('Shamim','MP','kusuma','Bagura', 01234567891);
+
+";
+
+$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('Shamim Khan','MP','kusuma','Bagura', 01234567891);
+
+";
+
+$sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
+VALUES('Showrav Mitra','MP','kusuma','Chittagong', 01234567891);
 
 ";
 
