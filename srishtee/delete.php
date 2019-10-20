@@ -8,7 +8,7 @@
 
     $uid= $_POST['uid'];
 
-    $sql= "DELETE FROM users WHERE id =$uid ";
+    $sql= "DELETE FROM students WHERE id =$uid ";
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";
