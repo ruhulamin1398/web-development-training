@@ -6,9 +6,9 @@
     <ul>
 
         <li> <a href="index.php"> home</a> </li>
-        <li> <a href="custom_query.php"> custom_query</a> </li>
-        <li> <a href="create.php"> create</a> </li>
-        <li> <a href="update.php"> update</a> </li>
+        <li> <a href="custom_query.php"> Teacher</a> </li>
+        <li> <a href="create.php"> Student</a> </li>
+        <li> <a href="about.php"> </a>About</li>
     </ul>
 </div>
  -->
