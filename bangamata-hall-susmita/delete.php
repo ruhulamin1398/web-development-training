@@ -6,17 +6,17 @@
 
 
 
-    $uid= $_POST['uid'];
+    $uid= $_GET['uid'];
 
-    $sql= "DELETE FROM users WHERE id =$uid ";
+    $sql= "DELETE FROM girls WHERE id =$uid ";
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";
     else 
     echo "Fail to inser data !! Try again";
-    header("Location:index.php"); 
+   # header("Location:index.php"); 
   
-    exit; 
+    # exit; 
 
 
 
