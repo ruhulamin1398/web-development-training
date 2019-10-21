@@ -38,7 +38,7 @@ if( isset($_POST['submit'])){
 
 
     if($db->query($sql)== TRUE)
-    echo "Data Added Successfully";
+    echo "Data Update Successfully";
     else 
     echo "Fail to insert data !! Try again";
 
