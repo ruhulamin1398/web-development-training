@@ -62,6 +62,28 @@ if ($girls->num_rows > 0) {
 				<i class="fas fa-edit" aria-hidden="true">
 				
 				</i>
+			</button>	
+
+
+			<!-- update area -->
+			<form method="get"  action ="delete.php"  id="delete<?php echo $girl['Id']?>"   style="display:none; " >
+			<input value="<?php echo $girl['Id']?>" name = 'uid' />
+
+			</form>
+
+
+
+
+			<button   onclick="
+				document.getElementById('delete<?php echo $girl['Id']?>').submit();
+				
+				
+	
+
+			" class="btn btn-success btn-sm btn-raised" >
+				<i class="fa fa-trash" aria-hidden="true">
+				
+				</i>
 			</button>
 
 
@@ -69,27 +91,7 @@ if ($girls->num_rows > 0) {
 <!-- Delete Area -->
 
 
-
-			<form method="POST"  action ="delete.php"  id="delete-form<?php echo $girl['Id']?>"   style="display:none; " >
-			<input value="<?php echo $girl['Id']?>" name = 'uid' />
-
-			</form>
-
-			<button   onclick="if(confirm('are you sure to delete  <?php echo $girl['firstname']?> ?')){
-				document.getElementById('delete-form<?php echo $girl['Id']?>').submit();
-				
-				
-			}
-			else{
-				event.preventDefault();
-
-			}
-
-			" class="btn btn-danger btn-sm btn-raised" >
-				<i class="fa fa-trash" aria-hidden="true">
-				
-				</i>
-			</button>
+			
 		</td>
 	</tr>
 		<?php }} ?>
