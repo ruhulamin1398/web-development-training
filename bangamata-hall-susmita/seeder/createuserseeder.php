@@ -7,7 +7,7 @@ include('../includes/db.php');
 # Drop if Exists 
 
 $sql=" 
-    DROP TABLE users
+    DROP TABLE girls
 ";
 
 

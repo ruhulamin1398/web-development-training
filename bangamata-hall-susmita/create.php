@@ -1,7 +1,9 @@
 <?php  include('includes\header.php')  ?>
 
+<?php
 
-<?php 
+
+
 
 function test_input($data) {
     $data = trim($data);
@@ -10,45 +12,108 @@ function test_input($data) {
     return $data;
   }
 
+ 
 
-
-$firstname="Ruhul";
-$lastname ="Amin";
 if( isset($_POST['submit'])){
 
-    $firstname= test_input( $_POST['firstname']);
-    $lastname= test_input ( $_POST['lastname'] );
+    $Firstname= test_input( $_POST['Firstname']);
+    $Lastname= test_input ( $_POST['Lastname'] );
+    $Reg_No= test_input( $_POST['Reg_No']);
+    $Hometown= test_input ( $_POST['Hometown'] );
+    $Department= test_input( $_POST['Department']);
+    $Phone_no= test_input ( $_POST['Phone_no'] );
+
+
   
-    echo $firstname."--".$lastname;
-    $sql= "INSERT INTO USERS (firstname, lastname) VALUES ('$firstname' ,'$lastname' ) ";
+    $sql= " INSERT INTO girls
+    (Firstname,Lastname,Reg_No,Hometown,  Department,Phone_no  ) VALUES('$Firstname', '$Lastname', '$Reg_No','$Hometown','$Department','$Phone_no')";
+
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";
     else 
-    echo "Fail to inser data !! Try again";
-
-}
-    if( isset($_POST['reset'])){
-
-  
-$firstname="Ruhul";
-$lastname ="Amin";
+    echo "Fail to insert data !! Try again";
 
 }
 ?>
 
 
-<form action="" method="post">
 
-First Name :<input type="text" name="firstname" value= <?php    echo $firstname ?> id=""/> <br>
-First Name :<input type="text" name="lastname"  value= <?php    echo $lastname ?> id="" /><br>
-<input type="submit" value="Add" name= 'submit'/>
-<input type="reset" name="reset" value="Reset">
 
+
+
+<!-- Horizontal material form -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <form action="" method="post" >
+
+          
+
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Firstname"    id="inputFirstname"
+                        class="form-control">
+                    <label for="inputFirstname">First Name</label>
+                </div>
+
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Lastname"    id="inputLastname"
+                        class="form-control">
+                    <label for="inputLastname">Last Name</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Reg_No"   id="inputReg_No"
+                        class="form-control">
+                    <label for="inputReg_No">Reg No</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Hometown"     id="inputHometown"
+                        class="form-control">
+                    <label for="inputHometown">Hometown</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Department"  id="inputDepartment"
+                        class="form-control">
+                    <label for="inputDepartment">Department</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-mobile-alt prefix"></i>
+                    <input type="text" name="Phone_no"     id="inputPhone_no"
+                        class="form-control">
+                    <label for="inputPhone_no">Phone No</label>
+                </div>
+
+                <!-- Material input -->
+                <div class="md-form">
+
+                    <input type="submit" name="submit" value="Edit" id="inputsubmit" class="form-control">
+
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Horizontal material form -->
 
 
 
 </form>
+
 
 
 
