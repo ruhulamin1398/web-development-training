@@ -81,7 +81,7 @@ if ($girls->num_rows > 0) {
 	
 
 			" class="btn btn-success btn-sm btn-raised" >
-				<i class="fas fa-edit" aria-hidden="true">
+				<i class="fa fa-trash" aria-hidden="true">
 				
 				</i>
 			</button>
@@ -92,24 +92,6 @@ if ($girls->num_rows > 0) {
 
 
 			
-
-			<button   onclick="
-			 bhdfh gh fdh d
-				
-	<?php 	
-    $uid= $girl['Id'];
-
-    $sql= "DELETE FROM users WHERE id =$uid ";
-
-    $db->query($sql);
-		
-	?>
-
-			" class="btn btn-danger btn-sm btn-raised" >
-				<i class="fa fa-trash" aria-hidden="true">
-				
-				</i>
-			</button>
 		</td>
 	</tr>
 		<?php }} ?>
