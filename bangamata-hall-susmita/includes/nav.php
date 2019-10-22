@@ -25,9 +25,7 @@
             </li>
          
             
-            <li class="nav-item">
-                <a class="nav-link" href="p.php">Provost</a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" href="create.php">Application Form</a>
             </li>
