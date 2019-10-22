@@ -7,7 +7,7 @@ include('../includes/db.php');
 # Drop if Exists 
 
 $sql=" 
-    DROP TABLE users
+    DROP TABLE Medicine
 ";
 
 
@@ -21,10 +21,12 @@ echo " droop failed";
 echo "<br>";
 #  Create table again 
 
-$sql = "CREATE TABLE users(
+$sql = "CREATE TABLE Medicine(
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(55) NOT NULL,
-    lastname  VARCHAR(55) NOT NULL
+  MedicineName  VARCHAR(55) NOT NULL,
+CompanyName VARCHAR(55) NOT NULL,
+Price INT(10) NOT NULL
+
 
 )";
 
@@ -38,19 +40,19 @@ echo "<br>";
 # Seeding data
 
 
-$sql ="INSERT INTO users(firstname,lastname )  
-VALUES('Ruhul','Amin');
+$sql ="INSERT INTO Medicine(MedicineName,CompanyName,Price)  
+VALUES('Napa','Beximco','380');
 
 ";
 
 
-$sql .= "INSERT INTO users (firstname, lastname)
-VALUES ('John', 'Doe');
+$sql .= "INSERT INTO Medicine(MedicineName, CompanyName,Price)
+VALUES ('Ace', 'Square','400');
 
 ";
 
-$sql .= "INSERT INTO users (firstname, lastname)
-VALUES ('tuhin', 'chy');
+$sql .= "INSERT INTO Medicine (MedicineName, CompanyName,Price)
+VALUES ('Flazil', 'ACI','280');
 
 ";
 

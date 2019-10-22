@@ -16,12 +16,11 @@ function test_input($data) {
 
 if( isset($_POST['submit'])){
 
-    $firstname= test_input( $_POST['firstname']);
-    $lastname= test_input ( $_POST['lastname'] );
-    $uid= test_input ( $_POST['uid'] );
-  
-    echo $firstname."--".$lastname;
-    $sql= "UPDATE USERS SET firstname='$firstname', lastname='$lastname'  WHERE id=$uid";
+    $MedicineName= test_input( $_POST['MedicineName']);
+    $CompanyName= test_input ( $_POST['CompanyName']);
+    $Price= test_input ( $_POST['Price']);
+    $sql= "UPDATE Medicine SET MedicineName='$MedicineName', CompanyName='$CompanyName',Price='$Price'  WHERE id=$uid";
+    
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";
@@ -39,11 +38,14 @@ if( isset($_POST['submit'])){
 
 $uid= $_GET['uid'];
 
-  $sql = "SELECT * FROM users WHERE id=$uid";
-  $user= $db->query($sql)->fetch_assoc();
+  $sql = "SELECT * FROM Medicine WHERE id=$uid";
+  $Medicine= $db->query($sql)->fetch_assoc();
 
-  $firstname=$user['firstname'];
-  $lastname= $user['lastname'];
+
+  $MedicineName= $Medicine['MedicineName'];
+  $CompanyName=  $Medicine['CompanyName'];
+  $Price= $Medicine['Price'];
+
 ?>
 
 
@@ -65,17 +67,24 @@ $uid= $_GET['uid'];
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="firstname" value="<?php    echo $firstname ?>" id="inputfirstname"
+                    <input type="text" name="MedicineName" value="<?php    echo $MedicineName ?>" id="inputfirstname"
                         class="form-control">
-                    <label for="inputfirstname">First Name</label>
+                    <label for="inputfirstname">Medicine Name</label>
                 </div>
 
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="lastname" value="<?php    echo $lastname ?>" id="inputlastname"
+                    <input type="text" name="CompanyName" value="<?php    echo $CompanyName ?>" id="inputlastname"
                         class="form-control">
-                    <label for="inputlastname">Last Name</label>
+                    <label for="inputlastname">Company Name</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Price" value="<?php    echo $Price ?>" id="inputlastname"
+                        class="form-control">
+                    <label for="inputlastname">Price</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
@@ -99,31 +108,6 @@ $uid= $_GET['uid'];
 
 <?php } 
 ?>
-<form action="" method="get">
-
-    Enter Id :<input type="number" name="uid" /><br>
-    <input type="submit" value="edit" name='update' />
-
-</form>
-
-<div class="form-row align-items-center">
-    <!-- Grid column -->
-    <div class="col-auto">
-      <!-- Material input -->
-      <div class="md-form">
-        <input type="number"  name="id" class="form-control mb-2" id="inlineFormInputMD" placeholder="1">
-
-
-        <label class="sr-only" for="inlineFormInputMD">ID</label>
-
-        
-      </div>
-    </div>
-    <!-- Grid column -->
-    <div class="col-auto">
-      <input  type="submit" value="edit" name='update'  class="btn btn-primary mb-0">
-    </div>
-</div>
 
 
 

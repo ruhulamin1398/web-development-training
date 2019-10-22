@@ -12,17 +12,19 @@ function test_input($data) {
 
 
 
-$firstname="Ruhul";
-$lastname ="Amin";
+$MedicineName="Ace";
+$CompanyName ="Square";
+$Price="280";
 
 
 
 if( isset($_POST['submit'])){
 
-    $firstname= test_input( $_POST['firstname']);
-    $lastname= test_input ( $_POST['lastname'] );
+    $MedicineName= test_input( $_POST['MedicineName']);
+    $CompanyName= test_input ( $_POST['CompanyName']);
+    $Price= test_input ( $_POST['Price']);
   
-    $sql= "INSERT INTO USERS (firstname, lastname) VALUES ('$firstname' ,'$lastname' ) ";
+    $sql= "INSERT INTO Medicine (MedicineName,CompanyName,Price) VALUES ('$MedicineName' ,'$CompanyName' ,'$Price' ) ";
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";
@@ -33,20 +35,21 @@ if( isset($_POST['submit'])){
     if( isset($_POST['reset'])){
 
   
-$firstname="Ruhul";
-$lastname ="Amin";
-
-}
+        $MedicineName="Ace";
+        $CompanyName ="Square";
+        $Price="280";
+    }
 ?>
 
 
 <form action="" method="post">
 
-First Name :<input type="text" name="firstname" value= <?php    echo $firstname ?> id=""/> <br>
+Medicine Name :<input type="text" name="MedicineName" value= <?php    echo $MedicineName ?> /> <br>
 
-First Name :<input type="text" name="lastname"  value= <?php    echo $lastname ?> id="" /><br>
+Company Name :<input type="text" name="CompanyName"  value= <?php    echo $CompanyName ?> /><br>
 
 
+Price :<input type="Number" name="Price"  value= <?php    echo $Price ?> /><br>
 
 <input type="submit" value="Add" name= 'submit'/>
 <input type="reset" name="reset" value="Reset">
