@@ -29,7 +29,7 @@ if( isset($_POST['submit'])){
     (Firstname,Lastname,Reg_No,Hometown,  Department,Phone_no  ) VALUES('$Firstname', '$Lastname', '$Reg_No','$Hometown','$Department','$Phone_no')";
 
 
-    if($db->query($sql)== TRUE)
+    if($db->query($sql)== false)
     echo "Data Added Successfully";
     else 
     echo "Fail to insert data !! Try again";

@@ -5,7 +5,7 @@
 $host= "localhost";
 $user= "root";
 $pass="";
-$database="bangamata";
+$database="Gotatikor High School";
 
 $db= new mysqli($host,$user,$pass,$database);
 

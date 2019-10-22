@@ -12,7 +12,7 @@
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
-    <span class="nav-brand h3 text-light ">Bangamata Hall</span>
+    <span class="nav-brand h3 text-light ">Gotatikor High School</span>
         <!-- Links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
