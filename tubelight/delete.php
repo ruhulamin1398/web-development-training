@@ -8,7 +8,7 @@
 
     $uid= $_GET['uid'];
 
-    $sql= "DELETE FROM girls WHERE id =$uid ";
+    $sql= "DELETE FROM student WHERE ID=$uid ";
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";

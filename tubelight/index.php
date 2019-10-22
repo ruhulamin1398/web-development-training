@@ -3,7 +3,7 @@
 
 
 
-<?php include('read.php')?>
+
 
 
 

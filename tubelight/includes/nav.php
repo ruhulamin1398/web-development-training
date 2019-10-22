@@ -26,7 +26,7 @@
          
             
             <li class="nav-item">
-                <a class="nav-link" href="p.php">Provost</a>
+                <a class="nav-link" href="Teacher.php">Teacher</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="create.php">Application Form</a>
@@ -34,8 +34,12 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" href="custom_query.php">Custom Query</a>
+                <a class="nav-link" href="Students.php">Students</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Gallery.php">Gallery</a>
+            </li>
+
 
 
 

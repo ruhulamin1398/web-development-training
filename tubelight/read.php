@@ -1,8 +1,8 @@
 <?php 
 
 
-$sql = "SELECT * FROM girls";
-$girls= $db->query($sql);
+$sql = "SELECT * FROM student";
+$student= $db->query($sql);
 
 ?>
 
@@ -14,13 +14,12 @@ $girls= $db->query($sql);
 <table class="table table-striped table-hover table-bordered ">
 	<thead>
 		<tr>
-			<th scope="col">Id</th>
-			<th scope="col">First</th>
-			<th scope="col">Last</th>
-			<th scope="col"> Reg No </th>
-			<th scope="col">Hometown</th>
-			<th scope="col">Department</th>
-			<th scope="col"> Phone No</th>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Class</th>
+			<th scope="col"> Phone_number </th>
+			<th scope="col">Address</th>
+			
 
 			<th scope="col" class="text-center">Action</th>
 		</tr>
@@ -28,24 +27,23 @@ $girls= $db->query($sql);
 	<tbody>
 	<?php
 	
-if ($girls->num_rows > 0) {
-	while($girl = $girls->fetch_assoc()) {
+if ($student->num_rows > 0) {
+	while($student = $student->fetch_assoc()) {
 	?>
 		<tr>
-			<th scope="row"><?php echo $girl['Id']?> </th>
-			<td><?php echo $girl['Firstname']?> </td>
-			<td> <?php echo $girl['Lastname']?></td>
-			<td> <?php echo $girl['Reg_No']?></td>
-			<td> <?php echo $girl['Hometown']?></td>
-			<td> <?php echo $girl['Department']?></td>
-			<td> <?php echo $girl['Phone_no']?></td>
+			<th scope="row"><?php echo $student['ID']?> </th>
+			<td><?php echo $student['Name']?> </td>
+			<td> <?php echo $student['Class']?></td>
+			<td> <?php echo $student['Phone_number']?></td>
+			<td> <?php echo $student['Address']?></td>
+			
 
 
 			<td class="text-center"> 
 
 			<!-- update area -->
-			<form method="get"  action ="update.php"  id="edit<?php echo $girl['Id']?>"   style="display:none; " >
-			<input value="<?php echo $girl['Id']?>" name = 'uid' />
+			<form method="get"  action ="update.php"  id="edit<?php echo $student['ID']?>"   style="display:none; " >
+			<input value="<?php echo $student['ID']?>" name = 'uid' />
 
 			</form>
 
@@ -53,7 +51,7 @@ if ($girls->num_rows > 0) {
 
 
 			<button   onclick="
-				document.getElementById('edit<?php echo $girl['Id']?>').submit();
+				document.getElementById('edit<?php echo $student['ID']?>').submit();
 				
 				
 	
@@ -66,8 +64,8 @@ if ($girls->num_rows > 0) {
 
 
 			<!-- update area -->
-			<form method="get"  action ="delete.php"  id="delete<?php echo $girl['Id']?>"   style="display:none; " >
-			<input value="<?php echo $girl['Id']?>" name = 'uid' />
+			<form method="get"  action ="delete.php"  ID="delete<?php echo $student['ID']?>"   style="display:none; " >
+			<input value="<?php echo $student['ID']?>" name = 'uid' />
 
 			</form>
 
@@ -75,7 +73,7 @@ if ($girls->num_rows > 0) {
 
 
 			<button   onclick="
-				document.getElementById('delete<?php echo $girl['Id']?>').submit();
+				document.getElementById('delete<?php echo $student['ID']?>').submit();
 				
 				
 	

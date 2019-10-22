@@ -16,20 +16,18 @@ function test_input($data) {
 
 if( isset($_POST['submit'])){
 
-    $Firstname= test_input( $_POST['Firstname']);
-    $Lastname= test_input ( $_POST['Lastname'] );
-    $Reg_No= test_input( $_POST['Reg_No']);
-    $Hometown= test_input ( $_POST['Hometown'] );
-    $Department= test_input( $_POST['Department']);
-    $Phone_no= test_input ( $_POST['Phone_no'] );
-
+    $Name= test_input( $_POST['Name']);
+    $Class= test_input ( $_POST['Class'] );
+    $Phone_number= test_input( $_POST['Phone_number']);
+    $Address= test_input ( $_POST['Address'] );
+   
 
   
-    $sql= " INSERT INTO girls
-    (Firstname,Lastname,Reg_No,Hometown,  Department,Phone_no  ) VALUES('$Firstname', '$Lastname', '$Reg_No','$Hometown','$Department','$Phone_no')";
+    $sql= " INSERT INTO student
+    (Name,Class,Phone_number,Address ) VALUES('$Name','$Class','$Phone_number','$Address')";
 
 
-    if($db->query($sql)== false)
+    if($db->query($sql)== TRUE)
     echo "Data Added Successfully";
     else 
     echo "Fail to insert data !! Try again";
@@ -54,48 +52,34 @@ if( isset($_POST['submit'])){
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Firstname"    id="inputFirstname"
+                    <input type="text" name="Name"    id="inputName"
                         class="form-control">
-                    <label for="inputFirstname">First Name</label>
+                    <label for="inputName">Name</label>
                 </div>
 
+               
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Lastname"    id="inputLastname"
+                    <input type="text" name="Class"   id="inputClass"
                         class="form-control">
-                    <label for="inputLastname">Last Name</label>
-                </div>
-                <!-- Material input -->
-                <div class="md-form">
-                    <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Reg_No"   id="inputReg_No"
-                        class="form-control">
-                    <label for="inputReg_No">Reg No</label>
+                    <label for="inputClass">Class</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Hometown"     id="inputHometown"
+                    <input type="text" name="Phone_number"     id="inputPhone_number"
                         class="form-control">
-                    <label for="inputHometown">Hometown</label>
+                    <label for="inputPhone_number">Phone_number</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Department"  id="inputDepartment"
+                    <input type="text" name="Address"  id="inputAddress"
                         class="form-control">
-                    <label for="inputDepartment">Department</label>
+                    <label for="inputAddress">Address</label>
                 </div>
-                <!-- Material input -->
-                <div class="md-form">
-                    <i class="fas fa-mobile-alt prefix"></i>
-                    <input type="text" name="Phone_no"     id="inputPhone_no"
-                        class="form-control">
-                    <label for="inputPhone_no">Phone No</label>
-                </div>
-
-                <!-- Material input -->
+               
                 <div class="md-form">
 
                     <input type="submit" name="submit" value="Edit" id="inputsubmit" class="form-control">
