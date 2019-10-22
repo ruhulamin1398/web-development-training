@@ -1,23 +1,7 @@
-<div
-    style="background:#000; text-align:center ; height :100px; padding-top:20px; padding-bottom:20px; color:aliceblue; font-size:300%; ">
 
-    Database Project Template
-</div>
-<!-- 
-    <div>
-    <ul>
-
-        <li> <a href="index.php"> home</a> </li>
-        <li> <a href="custom_query.php"> custom_query</a> </li>
-        <li> <a href="create.php"> create</a> </li>
-        <li> <a href="update.php"> update</a> </li>
-        
-    </ul>
-</div>
- -->
 
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark special-color-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
 
 
     <!-- Collapse button -->
@@ -28,9 +12,9 @@
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
-
+    <span class="nav-brand h3 text-light ">Bangamata Hall</span>
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home
                     <span class="sr-only">(current)</span>
@@ -39,19 +23,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="about.php">About</a>
             </li>
+         
+            
+           
             <li class="nav-item">
-                <a class="nav-link" href="update.php">Provost</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Photo Galary</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Application Form</a>
-            </li>
-
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="create.php">Application Form</a>
             </li>
 
 
@@ -64,11 +40,7 @@
         </ul>
         <!-- Links -->
 
-        <form class="form-inline">
-            <div class="md-form my-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-        </form>
+   
     </div>
     <!-- Collapsible content -->
 
