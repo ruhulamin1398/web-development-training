@@ -20,8 +20,8 @@ $users= $db->query($sql);
 	<thead>
 		<tr>
 			<th scope="col">Id</th>
-			<th scope="col">First</th>
-			<th scope="col">Last</th>
+			<th scope="col">Name</th>
+			<th scope="col">Result</th>
 			<th scope="col" class="text-center">Action</th>
 		</tr>
 	</thead>
@@ -33,8 +33,8 @@ if ($users->num_rows > 0) {
 	?>
 		<tr>
 			<th scope="row"><?php echo $user['id']?> </th>
-			<td><?php echo $user['firstname']?> </td>
-			<td> <?php echo $user['lastname']?></td>
+			<td><?php echo $user['fullName']?> </td>
+			<td> <?php echo $user['result']?></td>
 			<td class="text-center"> 
 
 			<!-- update area -->
@@ -69,7 +69,7 @@ if ($users->num_rows > 0) {
 
 			</form>
 
-			<button   onclick="if(confirm('are you sure to delete  <?php echo $user['firstname']?> ?')){
+			<button   onclick="if(confirm('are you sure to delete  <?php echo $user['fullName']?> ?')){
 				document.getElementById('delete-form<?php echo $user['id']?>').submit();
 				
 				

@@ -23,8 +23,8 @@ echo "<br>";
 
 $sql = "CREATE TABLE users(
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(55) NOT NULL,
-    lastname  VARCHAR(55) NOT NULL
+    fullName VARCHAR(55) NOT NULL,
+    result  VARCHAR(55) NOT NULL
 
 )";
 
@@ -38,14 +38,14 @@ echo "<br>";
 # Seeding data
 
 
-$sql ="INSERT INTO users(firstname,lastname )  
-VALUES('Ruhul','Amin');
+    $sql ="INSERT INTO users(fullName,result )  
+VALUES('Ruhul Amin','3.01');
 
 ";
 
 
-$sql .= "INSERT INTO users (firstname, lastname)
-VALUES ('John', 'Doe');
+$sql .= "INSERT INTO users (fullName, result)
+VALUES ('showrav Mitra', '3.14');
 
 ";
 
