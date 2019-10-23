@@ -12,7 +12,7 @@
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
-    <span class="nav-brand h3 text-light ">Bangamata Hall</span>
+    <span class="nav-brand h3 text-light ">Gotatikor High School </span>
         <!-- Links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -22,9 +22,7 @@
             </li>
             
            
-            <li class="nav-item">
-                <a class="nav-link" href="create.php">Add Student</a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" href="teacher.php">Teachers</a>
             </li>
