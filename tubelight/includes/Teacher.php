@@ -17,12 +17,14 @@
             </div>
 
             <div class="p-3">
+<ul>
 
 
-                <p>Rajob Ali</p><br>
-                <p>Saddak sir</p><br>
+              <li>  <p>Rajob Ali</p></li><br>
+              <li>  <p>Saddak sir</p></li><br>
 
-                <p>Sima kor</p><br>
+              <li>  <p>Sima kor</p></li><br>
+              </ul>
 
 
 

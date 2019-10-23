@@ -5,7 +5,7 @@
 $host= "localhost";
 $user= "root";
 $pass="";
-$database="Gotatikor High School";
+$database="high school management";
 
 $db= new mysqli($host,$user,$pass,$database);
 
