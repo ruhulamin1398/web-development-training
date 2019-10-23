@@ -27,12 +27,12 @@ $girls= $db->query($sql);
 	</thead>
 	<tbody>
 	<?php
-	
+	$i =1 ;
 if ($girls->num_rows > 0) {
 	while($girl = $girls->fetch_assoc()) {
 	?>
 		<tr>
-			<th scope="row"><?php echo $girl['Id']?> </th>
+			<th scope="row"><?php echo $i++?> </th>
 			<td><?php echo $girl['Firstname']?> </td>
 			<td> <?php echo $girl['Lastname']?></td>
 			<td> <?php echo $girl['Reg_No']?></td>
