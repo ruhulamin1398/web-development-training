@@ -42,23 +42,59 @@ if( isset($_POST['submit'])){
 ?>
 
 
-<form action="" method="post">
-
-Medicine Name :<input type="text" name="MedicineName" value= <?php    echo $MedicineName ?> /> <br>
-
-Company Name :<input type="text" name="CompanyName"  value= <?php    echo $CompanyName ?> /><br>
-
-
-Price :<input type="Number" name="Price"  value= <?php    echo $Price ?> /><br>
-
-<input type="submit" value="Add" name= 'submit'/>
-<input type="reset" name="reset" value="Reset">
 
 
 
 
-</form>
 
 
+
+
+<!-- Horizontal material form -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <form action="" method="post" >
+
+                <!-- Material input -->
+             
+
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="MedicineName" value="<?php    echo $MedicineName ?>" id="inputfirstname"
+                        class="form-control">
+                    <label for="inputfirstname">Medicine Name</label>
+                </div>
+
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="CompanyName" value="<?php    echo $CompanyName ?>" id="inputlastname"
+                        class="form-control">
+                    <label for="inputlastname">Company Name</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="Price" value="<?php    echo $Price ?>" id="inputlastname"
+                        class="form-control">
+                    <label for="inputlastname">Price</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+
+                    <input type="submit" name="submit" value="Add" id="inputsubmit" class="form-control">
+
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Horizontal material form -->
 
 <?php  include('includes\footer.php')  ?>
