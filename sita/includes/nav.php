@@ -20,14 +20,19 @@
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.php">About</a>
-            </li>
-         
             
            
             <li class="nav-item">
-                <a class="nav-link" href="create.php">Application Form</a>
+                <a class="nav-link" href="create.php">Add Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teacher.php">Teachers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="create.php">Add Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="student.php"> View Students</a>
             </li>
 
 

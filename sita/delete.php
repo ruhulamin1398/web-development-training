@@ -8,13 +8,13 @@
 
     $uid= $_GET['uid'];
 
-    $sql= "DELETE FROM girls WHERE id =$uid ";
+    $sql= "DELETE FROM students WHERE id =$uid ";
 
     if($db->query($sql)== TRUE)
-    echo "Data Added Successfully";
+    echo "Data Delete Successfully";
     else 
-    echo "Fail to inser data !! Try again";
-    header("Location:index.php"); 
+    echo "Fail to delete data !! Try again";
+    header("Location:student.php"); 
   
     exit; 
 

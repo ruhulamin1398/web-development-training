@@ -31,6 +31,6 @@ $br='<br>';
 
 </head>
 
-<body>
+<body style=" background:url('img/bg.jpg'); background-size :cover;background-repeat:no-repeat;">
 
     <?php  include("nav.php")  ?>

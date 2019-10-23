@@ -1,5 +1,13 @@
 <?php  include('includes\header.php')  ?>
 
+
+
+
+
+
+
+
+
 <?php
 
 
@@ -18,23 +26,15 @@ if( isset($_POST['submit'])){
 
     $Firstname= test_input( $_POST['Firstname']);
     $Lastname= test_input ( $_POST['Lastname'] );
-    $Reg_No= test_input( $_POST['Reg_No']);
+    $Rollno= test_input( $_POST['Rollno']);
     $Hometown= test_input ( $_POST['Hometown'] );
-    $Department= test_input( $_POST['Department']);
-    $Phone_no= test_input ( $_POST['Phone_no'] );
+    $Class= test_input( $_POST['Class']);
+    $Phoneno= test_input ( $_POST['Phoneno'] );
 
 
-    $uid= test_input ( $_POST['uid'] );
   
-    $sql= "UPDATE girls SET 
-    Firstname='$Firstname', 
-    Lastname='$Lastname', 
-    Reg_No='$Reg_No',
-    Hometown='$Hometown',
-    Department='$Department',
-    Phone_no='$Phone_no'
-    
-     WHERE Id=$uid";
+    $sql= " INSERT INTO students
+    (Firstname,Lastname,Rollno,Hometown,  Class ,Phoneno  ) VALUES('$Firstname', '$Lastname', '$Rollno','$Hometown','$Class','$Phoneno')";
 
 
     if($db->query($sql)== TRUE)
@@ -48,20 +48,32 @@ if( isset($_POST['submit'])){
 
 
 <?php 
- if( isset($_GET['uid']))
+
+
+
+
+if( isset($_GET['uid']))
 {
 
 $uid= $_GET['uid'];
 
-  $sql = "SELECT * FROM girls WHERE Id=$uid";
-  $girls= $db->query($sql)->fetch_assoc();
+  $sql = "SELECT * FROM students WHERE Id=$uid";
+  $student= $db->query($sql)->fetch_assoc();
 
-  $Firstname=$girls['Firstname'];
-  $Lastname= $girls['Lastname'];
-  $Reg_No=$girls['Reg_No'];
-  $Hometown= $girls['Hometown'];
-  $Department=$girls['Department'];
-  $Phone_no= $girls['Phone_no'];
+  
+
+  
+  $Firstname= $student['Firstname'];
+  $Lastname= $student['Lastname'] ;
+  $Rollno= $student['Rollno'];
+  $Hometown= $student['Hometown'] ;
+  $Class= $student['Class'];
+  $Phoneno= $student['Phoneno'] ;
+
+
+
+
+
 ?>
 
 
@@ -72,18 +84,20 @@ $uid= $_GET['uid'];
 
             <form action="" method="post" >
 
+          
+
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="uid" value="<?php    echo $uid ?>" id="inputid" class="form-control"
-                        readonly>
-                    <label>User Id</label>
+                    <input type="text" name="uid"         value="<?php    echo $uid ?>"   id="inputuid"
+                        class="form-control " readonly>
+                    <label for="inputuid">Id</label>
                 </div>
 
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Firstname" value="<?php    echo $Firstname ?>" id="inputFirstname"
+                    <input type="text" name="Firstname"         value="<?php    echo $Firstname ?>"   id="inputFirstname"
                         class="form-control">
                     <label for="inputFirstname">First Name</label>
                 </div>
@@ -91,37 +105,37 @@ $uid= $_GET['uid'];
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Lastname" value="<?php    echo $Lastname ?>" id="inputLastname"
+                    <input type="text" name="Lastname"          value="<?php    echo $Lastname ?>"  id="inputLastname"
                         class="form-control">
                     <label for="inputLastname">Last Name</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Reg_No" value="<?php    echo $Reg_No ?>" id="inputReg_No"
+                    <input type="text" name="Rollno"        value="<?php    echo $Rollno ?>"  id="inputRollno"
                         class="form-control">
-                    <label for="inputReg_No">Reg No</label>
+                    <label for="inputRollno">Roll No</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Hometown" value="<?php    echo $Hometown ?>" id="inputHometown"
+                    <input type="text" name="Hometown"          value="<?php    echo $Hometown ?>"   id="inputHometown"
                         class="form-control">
                     <label for="inputHometown">Hometown</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Department" value="<?php    echo $Department ?>" id="inputDepartment"
+                    <input type="text" name="Class"     value="<?php    echo $Class ?>"   id="inputClass"
                         class="form-control">
-                    <label for="inputDepartment">Department</label>
+                    <label for="inputClass">Class</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
-                    <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Phone_no" value="<?php    echo $Phone_no ?>" id="inputPhone_no"
+                    <i class="fas fa-mobile-alt prefix"></i>
+                    <input type="text" name="Phoneno"           value="<?php    echo $Phoneno ?>"   id="inputPhoneno"
                         class="form-control">
-                    <label for="inputPhone_no">Phone No</label>
+                    <label for="inputPhoneno">Phone No</label>
                 </div>
 
                 <!-- Material input -->
@@ -143,9 +157,6 @@ $uid= $_GET['uid'];
 
 </form>
 
-
-<?php } 
-?>
-
+<?php } ?>
 
 <?php  include('includes\footer.php')  ?>

@@ -2,11 +2,7 @@
 
 
 
-$host= "localhost";
-$user= "root";
-$pass="";
-$database="bangamata";
 
-$db= new mysqli($host,$user,$pass,$database);
+$db= new mysqli('localhost','root','','gotatikor');
 
 ?>

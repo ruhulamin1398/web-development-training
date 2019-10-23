@@ -7,7 +7,7 @@ include('../includes/db.php');
 # Drop if Exists 
 
 $sql=" 
-    DROP TABLE girls
+    DROP TABLE students
 ";
 
 
@@ -21,14 +21,14 @@ echo " droop failed";
 echo "<br>";
 #  Create table again 
 
-$sql = "CREATE TABLE girls(
+$sql = "CREATE TABLE students(
     Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    Firstname VARCHAR(55) NOT NULL,
-    Lastname  VARCHAR(55) NOT NULL,
-    Reg_No     INT(12)  NOT NULL,
-    Hometown  VARCHAR(255) NOT NULL,
-    Department VARCHAR(255) NOT NULL,
-    Phone_no VARCHAR(255) NOT NULL
+    Firstname   VARCHAR(55) NOT NULL,
+    Lastname    VARCHAR(55) NOT NULL,
+    Rollno      INT(12)  NOT NULL,
+    Phoneno     VARCHAR(255) NOT NULL,
+    Class       INT(12)  NOT NULL,
+    Hometown    VARCHAR(255) NOT NULL
 
 
 
@@ -44,15 +44,44 @@ echo "<br>";
 # Seeding data
 
 
-$sql ="INSERT INTO girls(Firstname,Lastname,Reg_No,Hometown,Department, Phone_no )  
-VALUES('Ruhul','Amin',2016331515,'Sylhet','CSE',01719843679);
+$sql ="INSERT INTO students(Firstname,Lastname,Rollno,Hometown,Class, Phoneno )  
+VALUES('Ruhul','Amin',25,'Sylhet','2',01719843679);
 
 ";
 
-$sql.="INSERT INTO girls(Firstname,Lastname,Reg_No,Hometown,Department, Phone_no )  
-VALUES('Yasir','Ahmed',562382719,'dhaka','EEE',9477247);
+$sql .="INSERT INTO students(Firstname,Lastname,Rollno,Hometown,Class, Phoneno )  
+VALUES('Ruhul','Amin',25,'Sylhet','2',01719843679);
 
 ";
+
+
+
+$sql .="INSERT INTO students(Firstname,Lastname,Rollno,Hometown,Class, Phoneno )  
+VALUES('Ruhul','Amin',25,'Sylhet','2',01719843679);
+
+";
+
+
+
+$sql .="INSERT INTO students(Firstname,Lastname,Rollno,Hometown,Class, Phoneno )  
+VALUES('Ruhul','Amin',25,'Sylhet','2',01719843679);
+
+";
+
+
+
+$sql .="INSERT INTO students(Firstname,Lastname,Rollno,Hometown,Class, Phoneno )  
+VALUES('Ruhul','Amin',25,'Sylhet','2',01719843679);
+
+";
+
+
+
+$sql .="INSERT INTO students(Firstname,Lastname,Rollno,Hometown,Class, Phoneno )  
+VALUES('Ruhul','Amin',25,'Sylhet','2',01719843679);
+
+";
+
 
 
 

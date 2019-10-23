@@ -18,15 +18,15 @@ if( isset($_POST['submit'])){
 
     $Firstname= test_input( $_POST['Firstname']);
     $Lastname= test_input ( $_POST['Lastname'] );
-    $Reg_No= test_input( $_POST['Reg_No']);
+    $Rollno= test_input( $_POST['Rollno']);
     $Hometown= test_input ( $_POST['Hometown'] );
-    $Department= test_input( $_POST['Department']);
-    $Phone_no= test_input ( $_POST['Phone_no'] );
+    $Class= test_input( $_POST['Class']);
+    $Phoneno= test_input ( $_POST['Phoneno'] );
 
 
   
-    $sql= " INSERT INTO girls
-    (Firstname,Lastname,Reg_No,Hometown,  Department,Phone_no  ) VALUES('$Firstname', '$Lastname', '$Reg_No','$Hometown','$Department','$Phone_no')";
+    $sql= " INSERT INTO students
+    (Firstname,Lastname,Rollno,Hometown,  Class ,Phoneno  ) VALUES('$Firstname', '$Lastname', '$Regno','$Hometown','$Class','$Phoneno')";
 
 
     if($db->query($sql)== TRUE)
@@ -69,9 +69,9 @@ if( isset($_POST['submit'])){
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Reg_No"   id="inputReg_No"
+                    <input type="text" name="Rollno"   id="inputRollno"
                         class="form-control">
-                    <label for="inputReg_No">Reg No</label>
+                    <label for="inputRollno">Roll No</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
@@ -83,16 +83,16 @@ if( isset($_POST['submit'])){
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Department"  id="inputDepartment"
+                    <input type="text" name="Class"  id="inputClass"
                         class="form-control">
-                    <label for="inputDepartment">Department</label>
+                    <label for="inputDepartment">Class</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-mobile-alt prefix"></i>
-                    <input type="text" name="Phone_no"     id="inputPhone_no"
+                    <input type="text" name="Phoneno"     id="inputPhoneno"
                         class="form-control">
-                    <label for="inputPhone_no">Phone No</label>
+                    <label for="inputPhoneno">Phone No</label>
                 </div>
 
                 <!-- Material input -->
