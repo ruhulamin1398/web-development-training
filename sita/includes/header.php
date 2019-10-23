@@ -1,7 +1,7 @@
 <?php
 include('db.php');
 
-
+$br='<br>';
 ?>
 
 
@@ -26,17 +26,11 @@ include('db.php');
 
 
 
-    <style>
-        body {
-            
-
-        }
-    </style>
 
 
 
 </head>
 
-<body>
+<body style=" background:url('img/bg.jpg'); background-size :cover;background-repeat:no-repeat;">
 
     <?php  include("nav.php")  ?>

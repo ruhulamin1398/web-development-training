@@ -6,15 +6,15 @@
 
 
 
-    $uid= $_POST['uid'];
+    $uid= $_GET['uid'];
 
     $sql= "DELETE FROM students WHERE id =$uid ";
 
     if($db->query($sql)== TRUE)
-    echo "Data delete Successfully";
+    echo "Data Delete Successfully";
     else 
     echo "Fail to delete data !! Try again";
-    header("Location:student_profile.php"); 
+    header("Location:student.php"); 
   
     exit; 
 

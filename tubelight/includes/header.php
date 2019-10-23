@@ -1,7 +1,7 @@
 <?php
 include('db.php');
 
-
+$br='<br>';
 ?>
 
 
@@ -26,12 +26,6 @@ include('db.php');
 
 
 
-    <style>
-        body {
-            
-
-        }
-    </style>
 
 
 

@@ -31,10 +31,6 @@
             </li>
 
 
-            <li class="nav-item">
-                <a class="nav-link" href="custom_query.php">Custom Query</a>
-            </li>
-
 
 
         </ul>

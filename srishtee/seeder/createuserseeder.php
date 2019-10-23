@@ -14,7 +14,7 @@ $sql="
 if($db->query($sql) == TRUE)
 echo "drop success";
 else
-echo " droop failed";
+echo " drop failed";
 
 
 
@@ -27,9 +27,12 @@ $sql = "CREATE TABLE students(
     fathers_name varchar(55) NOT NULL,
     mothers_name varchar(55) NOT NULL,
     present_address varchar(100) NOT NULL,
-    phone_number varchar(11) NOT NULL
+    phone_number varchar(51) NOT NULL
 
 )";
+
+
+
 
 if($db->query($sql) == TRUE)
 echo "table create success";
@@ -42,20 +45,19 @@ echo "<br>";
 
 
 $sql ="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Ruhul Amin','Haidar Ali','Neelufa Akter','Habiganj', 01234567891);
+VALUES('Ruhul Amin','Haidar Ali','Neelufa Akter','Habiganj', +8801234567891);
 
 ";
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Shoumik Roy','X','Y','Sylhet', 01234567891);
+VALUES('Shoumik Roy','X','Y','Sylhet', 00000000000001234567891);
 
 ";
 
 
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Sita Rani Nath','X','Y','Sunamgonj', 01234567891);
-
+VALUES('Sita Rani Nath','X','Y','Sylhet', 01234567891);
 ";
 
 
@@ -66,17 +68,17 @@ VALUES('Sushmita Sarker','W','X','Sylhet', 01234567891);
 
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Shamim','MP','kusuma','Bagura', 01234567891);
+VALUES('Senjuthi Bhattacharjee','Santosh Bhattacharjee','Kabita Bhattacharjee','Chittagong', 01234567891);
 
 ";
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Shamim Khan','MP','kusuma','Bagura', 01234567891);
+VALUES('Srishtee Bhattacharjee','Santosh Bhattacharjee','Kabita Bhattacharjee','Chittagong', 01234567891);
 
 ";
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Showrav Mitra','MP','kusuma','Chittagong', 01234567891);
+VALUES('Showrav Mitra','x','y','Chittagong', 01234567891);
 
 ";
 
