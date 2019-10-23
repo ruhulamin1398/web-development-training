@@ -1,7 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php  include('includes\header.php')  ?>
 
+<?php
 
-<?php 
+
+
 
 function test_input($data) {
     $data = trim($data);
@@ -10,45 +26,80 @@ function test_input($data) {
     return $data;
   }
 
+ 
 
-
-$firstname="Ruhul";
-$lastname ="Amin";
 if( isset($_POST['submit'])){
 
-    $firstname= test_input( $_POST['firstname']);
-    $lastname= test_input ( $_POST['lastname'] );
+    $fullName= test_input( $_POST['fullName']);
+    $rasult= test_input ( $_POST['result'] );
+
   
-    echo $firstname."--".$lastname;
-    $sql= "INSERT INTO USERS (firstname, lastname) VALUES ('$firstname' ,'$lastname' ) ";
+    $sql= "INSERT INTO USERS (fullName, result) VALUES ('$fullName' ,'$rasult' ) ";
 
     if($db->query($sql)== TRUE)
-    echo "Data Added Successfully";
+    echo "Data insert Successfully";
     else 
     echo "Fail to inser data !! Try again";
-
-}
-    if( isset($_POST['reset'])){
-
-  
-$firstname="Ruhul";
-$lastname ="Amin";
 
 }
 ?>
 
 
-<form action="" method="post">
 
-First Name :<input type="text" name="firstname" value= <?php    echo $firstname ?> id=""/> <br>
-First Name :<input type="text" name="lastname"  value= <?php    echo $lastname ?> id="" /><br>
-<input type="submit" value="Add" name= 'submit'/>
-<input type="reset" name="reset" value="Reset">
+<?php 
+ 
+{
 
+?>
+
+
+<!-- Horizontal material form -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <form action="" method="post" >
+
+       
+
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="fullName" value="" id="inputfullName"
+                        class="form-control">
+                    <label for="inputfullName">Full Name</label>
+                </div>
+
+                <!-- Material input -->
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" name="result" value="" id="inputrasult"
+                        class="form-control">
+                    <label for="inputrasult">Result</label>
+                </div>
+                <!-- Material input -->
+                <div class="md-form">
+
+                    <input type="submit" name="submit" value="Create" id="inputsubmit" class="form-control">
+
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Horizontal material form -->
 
 
 
 </form>
+
+
+<?php } 
+?>
+
 
 
 

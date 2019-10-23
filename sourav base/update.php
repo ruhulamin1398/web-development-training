@@ -16,15 +16,14 @@ function test_input($data) {
 
 if( isset($_POST['submit'])){
 
-    $firstname= test_input( $_POST['firstname']);
-    $lastname= test_input ( $_POST['lastname'] );
+    $fullName= test_input( $_POST['fullName']);
+    $rasult= test_input ( $_POST['result'] );
     $uid= test_input ( $_POST['uid'] );
   
-    echo $firstname."--".$lastname;
-    $sql= "UPDATE USERS SET firstname='$firstname', lastname='$lastname'  WHERE id=$uid";
+    $sql= "UPDATE USERS SET fullName='$fullName', result='$rasult'  WHERE id=$uid";
 
     if($db->query($sql)== TRUE)
-    echo "Data Added Successfully";
+    echo "Data update Successfully";
     else 
     echo "Fail to inser data !! Try again";
 
@@ -42,8 +41,8 @@ $uid= $_GET['uid'];
   $sql = "SELECT * FROM users WHERE id=$uid";
   $user= $db->query($sql)->fetch_assoc();
 
-  $firstname=$user['firstname'];
-  $lastname= $user['lastname'];
+  $fullName=$user['fullName'];
+  $rasult= $user['result'];
 ?>
 
 
@@ -65,17 +64,17 @@ $uid= $_GET['uid'];
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="firstname" value="<?php    echo $firstname ?>" id="inputfirstname"
+                    <input type="text" name="fullName" value="<?php    echo $fullName ?>" id="inputfullName"
                         class="form-control">
-                    <label for="inputfirstname">First Name</label>
+                    <label for="inputfullName">Full Name</label>
                 </div>
 
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="lastname" value="<?php    echo $lastname ?>" id="inputlastname"
+                    <input type="text" name="result" value="<?php    echo $rasult ?>" id="inputrasult"
                         class="form-control">
-                    <label for="inputlastname">Last Name</label>
+                    <label for="inputrasult">Result</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
@@ -99,27 +98,6 @@ $uid= $_GET['uid'];
 
 <?php } 
 ?>
-<form action="" method="get">
-
-    Enter Id :<input type="number" name="uid" /><br>
-    <input type="submit" value="edit" name='update' />
-
-</form>
-
-<div class="form-row align-items-center">
-    <!-- Grid column -->
-    <div class="col-auto">
-      <!-- Material input -->
-      <div class="md-form">
-        <input type="number"  name="id" class="form-control mb-2" id="inlineFormInputMD" placeholder="1">
-        <label class="sr-only" for="inlineFormInputMD">ID</label>
-      </div>
-    </div>
-    <!-- Grid column -->
-    <div class="col-auto">
-      <input  type="submit" value="edit" name='update'  class="btn btn-primary mb-0">
-    </div>
-</div>
 
 
 
