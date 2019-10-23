@@ -16,7 +16,7 @@
             <tr>
                 <th scope="col">Course No</th>
                 <th colspan="2">Course Title</th>
-                <th>Cradit</th>
+                <th>Credit</th>
             </tr>
         </thead>
         <tbody>

@@ -11,10 +11,10 @@
     $sql= "DELETE FROM students WHERE id =$uid ";
 
     if($db->query($sql)== TRUE)
-    echo "Data Added Successfully";
+    echo "Data delete Successfully";
     else 
-    echo "Fail to inser data !! Try again";
-    header("Location:index.php"); 
+    echo "Fail to delete data !! Try again";
+    header("Location:student_profile.php"); 
   
     exit; 
 

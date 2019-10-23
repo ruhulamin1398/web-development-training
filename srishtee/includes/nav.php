@@ -29,6 +29,10 @@
                 <a class="nav-link" href="student_profile.php">Student_Profile</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="create.php">Add Student</a>
+            </li>
+
 
 
         </ul>

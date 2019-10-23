@@ -54,8 +54,7 @@ VALUES('Shoumik Roy','X','Y','Sylhet', 01234567891);
 
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Sita Rani Nath','X','Y','Sunamgonj', 01234567891);
-
+VALUES('Sita Rani Nath','X','Y','Sylhet', 01234567891);
 ";
 
 
@@ -66,17 +65,17 @@ VALUES('Sushmita Sarker','W','X','Sylhet', 01234567891);
 
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Shamim','MP','kusuma','Bagura', 01234567891);
+VALUES('Senjuthi Bhattacharjee','Santosh Bhattacharjee','Kabita Bhattacharjee','Chittagong', 01234567891);
 
 ";
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Shamim Khan','MP','kusuma','Bagura', 01234567891);
+VALUES('Srishtee Bhattacharjee','Santosh Bhattacharjee','Kabita Bhattacharjee','Chittagong', 01234567891);
 
 ";
 
 $sql .="INSERT INTO students(student_name,fathers_name,mothers_name,present_address,phone_number )  
-VALUES('Showrav Mitra','MP','kusuma','Chittagong', 01234567891);
+VALUES('Showrav Mitra','x','y','Chittagong', 01234567891);
 
 ";
 
