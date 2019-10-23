@@ -1,7 +1,7 @@
 <?php
 include('db.php');
 
-
+$br='<br>';
 ?>
 
 
