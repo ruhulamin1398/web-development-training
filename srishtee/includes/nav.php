@@ -1,9 +1,9 @@
-<div style="background:#000; text-align:center ; height :100px; padding-top:20px; padding-bottom:20px; color:aliceblue; font-size:300%; ">
+<div  class=" teal darken-4" style=" text-align:center ; height :100px; padding-top:20px; padding-bottom:20px; color:aliceblue; font-size:300%; ">
 
     Sylhet Engineering College
 </div>
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark special-color-dark">
+<nav class="navbar navbar-expand-lg navbar-dark teal darken-2 ">
 
   
     <!-- Collapse button -->
@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="basicExampleNav">
 
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mc-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home
                     <span class="sr-only">(current)</span>
@@ -38,11 +38,6 @@
         </ul>
         <!-- Links -->
 
-        <form class="form-inline">
-            <div class="md-form my-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-        </form>
     </div>
     <!-- Collapsible content -->
 

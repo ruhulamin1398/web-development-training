@@ -48,7 +48,7 @@ $students= $db->query($sql);
 				document.getElementById('edit<?php echo $student['id']?>').submit();
 
 			" class="btn btn-success btn-sm btn-raised">
-						<i class="fas fa-edit" aria-hidden="true">
+						<i class="fas fa-feather-alt" aria-hidden="true">
 
 						</i>
 					</button>
@@ -64,7 +64,7 @@ $students= $db->query($sql);
 				document.getElementById('delete<?php echo $student['id']?>').submit();
 
 			" class="btn btn-danger btn-sm btn-raised">
-						<i class="fas fa-trash" aria-hidden="true">
+						<i class="fas fa-minus-circle" aria-hidden="true">
 
 						</i>
 					</button>
