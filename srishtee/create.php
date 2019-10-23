@@ -32,7 +32,8 @@ if( isset($_POST['submit'])){
 
 
   
-    $sql="INSERT INTO students (student_name,fathers_name,mothers_name,present_address,phone_number) VALUES ($student_name,$fathers_name,$mothers_name,$present_address,$phone_number)";
+    $sql="INSERT INTO students
+     (student_name,fathers_name,mothers_name,present_address,phone_number) VALUES ('$student_name','$fathers_name','$mothers_name','$present_address','$phone_number')";
 
     if($db->query($sql)== TRUE)
     echo "Data Added Successfully";

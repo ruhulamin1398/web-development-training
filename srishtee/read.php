@@ -26,7 +26,7 @@ $students= $db->query($sql);
 		<tbody>
 			<?php
 	
-if ($students->num_rows > 0) {
+
 	while($student = $students->fetch_assoc()) {
 	?>
 			<tr>
@@ -75,7 +75,7 @@ if ($students->num_rows > 0) {
 
 				</td>
 			</tr>
-			<?php }} ?>
+			<?php } ?>
 
 		</tbody>
 	</table>

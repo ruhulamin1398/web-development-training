@@ -1,6 +1,6 @@
 <div style="background:#000; text-align:center ; height :100px; padding-top:20px; padding-bottom:20px; color:aliceblue; font-size:300%; ">
 
-    Database Project Template
+    Sylhet Engineering College
 </div>
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark special-color-dark">
