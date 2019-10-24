@@ -14,7 +14,7 @@
     echo "Data Added Successfully";
     else 
     echo "Fail to inser data !! Try again";
-    header("Location:read.php"); 
+    header("Location:index.php"); 
   
     exit; 
 

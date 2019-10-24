@@ -1,4 +1,4 @@
-<div style="background:#000; text-align:center ; height :50px; padding-top:20px; color:aliceblue; ">
+<div class="secondary-color" style=" text-align:center ; height :50px; padding-top:20px; color:aliceblue; ">
 
     @copyright 2019
 </div>

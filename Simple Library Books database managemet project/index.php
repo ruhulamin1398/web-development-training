@@ -3,7 +3,7 @@
 
 
 
-<?php include('create.php')?>
+<?php include('read.php')?>
 
 
 

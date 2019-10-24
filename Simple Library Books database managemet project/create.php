@@ -1,3 +1,5 @@
+<?php  include('includes\header.php')  ?>
+
 
 
 <?php
@@ -85,3 +87,6 @@ if( isset($_POST['submit'])){
 
 <?php } 
 ?>
+
+
+<?php  include('includes\footer.php')  ?>

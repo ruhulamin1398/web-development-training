@@ -1,10 +1,10 @@
-<div style="background:#000; text-align:center ; height :100px; padding-top:20px; padding-bottom:20px; color:aliceblue; font-size:300%; ">
+<div  class="secondary-color-dark" style=" text-align:center ; height :100px; padding-top:20px; padding-bottom:20px; color:aliceblue; font-size:300%; ">
 
     Simple Library
 </div>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark special-color-dark">
+<nav class="navbar navbar-expand-lg navbar-dark secondary-color">
 
   
     <!-- Collapse button -->
@@ -24,14 +24,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="read.php">View</a>
+                <a class="nav-link" href="create.php">Create</a>
             </li>
-
- 
-            <li class="nav-item">
-                <a class="nav-link" href="about.php">About</a>
-            </li>
-     
 
 
 

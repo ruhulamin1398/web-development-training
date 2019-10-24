@@ -1,6 +1,4 @@
 
-<?php  include('includes\header.php')  ?>
-
 <?php 
 
 
@@ -105,7 +103,5 @@ if ($users->num_rows > 0) {
 
 
 
-
-<?php  include('includes\footer.php')  ?>
 
 
