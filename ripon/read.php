@@ -1,4 +1,10 @@
+
+<?php  include('includes\header.php')  ?>
+
 <?php 
+
+
+
 
 
 $sql = "SELECT * FROM users";
@@ -9,32 +15,28 @@ $users= $db->query($sql);
 
 
 <div class="container">
-	<!-- @if (session('successMsg'))
-	<div class="alert alert-dismissible alert-success">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Well done!</strong> {{ session('successMsg') }}
-	</div>
-	@endif -->
+
 
 <table class="table table-striped table-hover table-bordered ">
 	<thead>
 		<tr>
 			<th scope="col">Id</th>
-			<th scope="col">Name</th>
-			<th scope="col">Result</th>
+			<th scope="col">Reason</th>
+			<th scope="col">Amount</th>
 			<th scope="col" class="text-center">Action</th>
 		</tr>
 	</thead>
 	<tbody>
 	<?php
-	
+	$i=1;
+	$sum=0;
 if ($users->num_rows > 0) {
 	while($user = $users->fetch_assoc()) {
 	?>
 		<tr>
-			<th scope="row"><?php echo $user['id']?> </th>
-			<td><?php echo $user['fullName']?> </td>
-			<td> <?php echo $user['result']?></td>
+			<th scope="row"><?php echo $i++;?> </th>
+			<td><?php echo $user['costReason']?> </td>
+			<td> <?php echo $user['amount']?></td>
 			<td class="text-center"> 
 
 			<!-- update area -->
@@ -69,7 +71,7 @@ if ($users->num_rows > 0) {
 
 			</form>
 
-			<button   onclick="if(confirm('are you sure to delete  <?php echo $user['fullName']?> ?')){
+			<button   onclick="if(confirm('are you sure to delete  <?php echo $user['costReason']?> ?')){
 				document.getElementById('delete-form<?php echo $user['id']?>').submit();
 				
 				
@@ -85,75 +87,25 @@ if ($users->num_rows > 0) {
 				</i>
 			</button>
 		</td>
+
+	<?php 	$sum+=$user['amount']; ?>
 	</tr>
-		<?php }} ?>
+		<?php }}  
+?>
 
 </tbody>
-</table>
 
+</table>
+<div class="  btn border border-dark row mr-auto">
+
+<?php echo "Total : " .$sum;  ?>
+</div>
 </div>
 
 
-<!--
-
- <!doctype html>
-
-<div class="container">
-	 @if (session('successMsg'))
-	<div class="alert alert-dismissible alert-success">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Well done!</strong> {{ session('successMsg') }}
-	</div>
-	@endif 
-
-<table class="table table-striped table-hover table-bordered ">
-	<thead>
-		<tr>
-			<th scope="col">Id</th>
-			<th scope="col">First</th>
-			<th scope="col">Last</th>
-			<th scope="col" class="text-center">Action</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach($students as $student)
-		<tr>
-			<th scope="row">{{$student->id}} </th>
-			<td>{{ $student->first_name}} </td>
-			<td> {{$student->last_name}} </td>
-			<td class="text-center"> <a href="{{ route('edit',  $student->id )}} " class="btn btn-primary btn-raised btn-sm">
-				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-			</a>
-
-			<form method="POST"  action ="{{ route('destroy',  $student->id )}} "  id="delete-form-{{ $student->id }}"   style="display:none; " >
-
-			</form>
 
 
 
+<?php  include('includes\footer.php')  ?>
 
-			<button   onclick="if(confirm('are you sure to delete this')){
-				document.getElementById('delete-form-{{ $student->id }}').submit();
 
-			}
-			else{
-				event.preventDefault();
-
-			}
-
-			" class="btn btn-danger btn-sm btn-raised" >
-				<i class="fa fa-trash" aria-hidden="true">
-				
-				</i>
-			</button>
-		</td>
-	</tr>
-	@endforeach
-</tbody>
-</table>
-{{$students->links()}} 
-
-</div>
-@endsection
-
--->

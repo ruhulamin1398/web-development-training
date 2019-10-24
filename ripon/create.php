@@ -1,19 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<?php  include('includes\header.php')  ?>
-
 <?php
 
 
@@ -30,11 +16,11 @@ function test_input($data) {
 
 if( isset($_POST['submit'])){
 
-    $fullName= test_input( $_POST['fullName']);
-    $rasult= test_input ( $_POST['result'] );
+    $costReason= test_input( $_POST['costReason']);
+    $amount= test_input ( $_POST['amount'] );
 
   
-    $sql= "INSERT INTO USERS (fullName, result) VALUES ('$fullName' ,'$rasult' ) ";
+    $sql= "INSERT INTO USERS (costReason, amount) VALUES ('$costReason' ,'$amount' ) ";
 
     if($db->query($sql)== TRUE)
     echo "Data insert Successfully";
@@ -65,17 +51,17 @@ if( isset($_POST['submit'])){
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="fullName" value="" id="inputfullName"
+                    <input type="text" name="costReason" value="" id="inputfullName"
                         class="form-control">
-                    <label for="inputfullName">Full Name</label>
+                    <label for="inputfullName">Reason</label>
                 </div>
 
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="result" value="" id="inputrasult"
+                    <input type="number" name="amount" value="" id="inputrasult"
                         class="form-control">
-                    <label for="inputrasult">Result</label>
+                    <label for="inputrasult">Amount</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
@@ -99,8 +85,3 @@ if( isset($_POST['submit'])){
 
 <?php } 
 ?>
-
-
-
-
-<?php  include('includes\footer.php')  ?>

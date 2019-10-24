@@ -16,11 +16,11 @@ function test_input($data) {
 
 if( isset($_POST['submit'])){
 
-    $fullName= test_input( $_POST['fullName']);
-    $rasult= test_input ( $_POST['result'] );
+    $costReason= test_input( $_POST['costReason']);
+    $amount= test_input ( $_POST['amount'] );
     $uid= test_input ( $_POST['uid'] );
   
-    $sql= "UPDATE USERS SET fullName='$fullName', result='$rasult'  WHERE id=$uid";
+    $sql= "UPDATE USERS SET costReason='$costReason', amount='$amount'  WHERE id=$uid";
 
     if($db->query($sql)== TRUE)
     echo "Data update Successfully";
@@ -41,8 +41,8 @@ $uid= $_GET['uid'];
   $sql = "SELECT * FROM users WHERE id=$uid";
   $user= $db->query($sql)->fetch_assoc();
 
-  $fullName=$user['fullName'];
-  $rasult= $user['result'];
+  $costReason=$user['costReason'];
+  $amount= $user['amount'];
 ?>
 
 
@@ -64,17 +64,17 @@ $uid= $_GET['uid'];
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="fullName" value="<?php    echo $fullName ?>" id="inputfullName"
+                    <input type="text" name="costReason" value="<?php    echo $costReason ?>" id="inputfullName"
                         class="form-control">
-                    <label for="inputfullName">Full Name</label>
+                    <label for="inputfullName">Reason</label>
                 </div>
 
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="result" value="<?php    echo $rasult ?>" id="inputrasult"
+                    <input type="text" name="amount" value="<?php    echo $amount ?>" id="inputrasult"
                         class="form-control">
-                    <label for="inputrasult">Result</label>
+                    <label for="inputrasult">Amount</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
