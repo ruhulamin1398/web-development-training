@@ -1,4 +1,3 @@
- 
 
 
   <?php  include('includes\header.php')  ?>
@@ -11,8 +10,8 @@
         
   <div class="h2">To connect with us </div>
 
-<div class="h4"> modelpharmacy@gmail.com </div>
-<div class="h4"> mobile : +8801609996754</div>
+<div class="h4"> showravmitra@gmail.com </div>
+<div class="h4"> mobile : +01816251420</div>
 
     </div>
 </div>

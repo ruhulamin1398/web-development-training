@@ -26,7 +26,7 @@ if( isset($_POST['submit'])){
 
   
     $sql= " INSERT INTO students
-    (Firstname,Lastname,Rollno,Hometown,  Class ,Phoneno  ) VALUES('$Firstname', '$Lastname', '$Regno','$Hometown','$Class','$Phoneno')";
+    (Firstname,Lastname,Rollno,Hometown,  Class ,Phoneno  ) VALUES('$Firstname', '$Lastname', '$Rollno','$Hometown','$Class','$Phoneno')";
 
 
     if($db->query($sql)== TRUE)
@@ -98,7 +98,7 @@ if( isset($_POST['submit'])){
                 <!-- Material input -->
                 <div class="md-form">
 
-                    <input type="submit" name="submit" value="Edit" id="inputsubmit" class="form-control">
+                    <input type="submit" name="submit" value="Create" id="inputsubmit" class="form-control">
 
                 </div>
 

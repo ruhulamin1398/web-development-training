@@ -15,6 +15,7 @@ function test_input($data) {
  
 
 if( isset($_POST['submit'])){
+    $uid=  $_POST['uid'];
 
     $MedicineName= test_input( $_POST['MedicineName']);
     $CompanyName= test_input ( $_POST['CompanyName']);

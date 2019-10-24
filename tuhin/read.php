@@ -1,20 +1,36 @@
 <?php 
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 
+if( isset($_POST['search']) ){
 
-$sql = "SELECT * FROM Medicine";
-$Medicines= $db->query($sql);
+	$MedicineName=test_input($_POST['MedicineName']);
+
+	$sql = "SELECT * FROM Medicine where MedicineName = '$MedicineName' " ;
+	$Medicines= $db->query($sql);
+}
+else{
+
+	$sql = "SELECT * FROM Medicine";
+	$Medicines= $db->query($sql);
+}
 
 ?>
 
+<div style="
+height:80vh;
+background:url('img/bg5.jpg');
+background-size:cover;
+background-repeat:no-repeat;
 
+">
 
 <div class="container">
-	<!-- @if (session('successMsg'))
-	<div class="alert alert-dismissible alert-success">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Well done!</strong> {{ session('successMsg') }}
-	</div>
-	@endif -->
+
 
 <table class="table table-striped table-hover table-bordered ">
 	<thead>
@@ -94,3 +110,4 @@ if ($Medicines->num_rows > 0) {
 
 </div>
 
+</div>

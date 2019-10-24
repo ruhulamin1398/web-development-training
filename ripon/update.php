@@ -1,7 +1,9 @@
 <?php  include('includes\header.php')  ?>
 
+<?php
 
-<?php 
+
+
 
 function test_input($data) {
     $data = trim($data);
@@ -10,44 +12,38 @@ function test_input($data) {
     return $data;
   }
 
-
-
-$MedicineName="Ace";
-$CompanyName ="Square";
-$Price="280";
-
-
+ 
 
 if( isset($_POST['submit'])){
 
-    $MedicineName= test_input( $_POST['MedicineName']);
-    $CompanyName= test_input ( $_POST['CompanyName']);
-    $Price= test_input ( $_POST['Price']);
+    $costReason= test_input( $_POST['costReason']);
+    $amount= test_input ( $_POST['amount'] );
+    $uid= test_input ( $_POST['uid'] );
   
-    $sql= "INSERT INTO Medicine (MedicineName,CompanyName,Price) VALUES ('$MedicineName' ,'$CompanyName' ,'$Price' ) ";
+    $sql= "UPDATE USERS SET costReason='$costReason', amount='$amount'  WHERE id=$uid";
 
     if($db->query($sql)== TRUE)
-    echo "Data Added Successfully";
+    echo "Data update Successfully";
     else 
     echo "Fail to inser data !! Try again";
 
 }
-    if( isset($_POST['reset'])){
-
-  
-        $MedicineName="Ace";
-        $CompanyName ="Square";
-        $Price="280";
-    }
 ?>
 
 
 
+<?php 
+ if( isset($_GET['uid']))
+{
 
+$uid= $_GET['uid'];
 
+  $sql = "SELECT * FROM users WHERE id=$uid";
+  $user= $db->query($sql)->fetch_assoc();
 
-
-
+  $costReason=$user['costReason'];
+  $amount= $user['amount'];
+?>
 
 
 <!-- Horizontal material form -->
@@ -58,34 +54,32 @@ if( isset($_POST['submit'])){
             <form action="" method="post" >
 
                 <!-- Material input -->
-             
-
-                <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="MedicineName" value="<?php    echo $MedicineName ?>" id="inputfirstname"
-                        class="form-control">
-                    <label for="inputfirstname">Medicine Name</label>
+                    <input type="text" name="uid" value="<?php    echo $uid ?>" id="inputid" class="form-control"
+                        readonly>
+                    <label>User Id</label>
                 </div>
 
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="CompanyName" value="<?php    echo $CompanyName ?>" id="inputlastname"
+                    <input type="text" name="costReason" value="<?php    echo $costReason ?>" id="inputfullName"
                         class="form-control">
-                    <label for="inputlastname">Company Name</label>
+                    <label for="inputfullName">Reason</label>
                 </div>
+
                 <!-- Material input -->
                 <div class="md-form">
                     <i class="fas fa-user prefix"></i>
-                    <input type="text" name="Price" value="<?php    echo $Price ?>" id="inputlastname"
+                    <input type="text" name="amount" value="<?php    echo $amount ?>" id="inputrasult"
                         class="form-control">
-                    <label for="inputlastname">Price</label>
+                    <label for="inputrasult">Amount</label>
                 </div>
                 <!-- Material input -->
                 <div class="md-form">
 
-                    <input type="submit" name="submit" value="Add" id="inputsubmit" class="form-control">
+                    <input type="submit" name="submit" value="Edit" id="inputsubmit" class="form-control">
 
                 </div>
 
@@ -96,5 +90,16 @@ if( isset($_POST['submit'])){
     </div>
 </div>
 <!-- Horizontal material form -->
+
+
+
+</form>
+
+
+<?php } 
+?>
+
+
+
 
 <?php  include('includes\footer.php')  ?>
